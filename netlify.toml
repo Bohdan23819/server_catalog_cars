@@ -1,0 +1,6 @@
+[build]
+  functions = "functions"
+
+[functions]
+  directory = "src"
+  included_files = ["src/data/**"]
