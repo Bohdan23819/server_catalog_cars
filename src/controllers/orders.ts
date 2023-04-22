@@ -26,7 +26,7 @@ export const addOrder = async(req: Request, res: Response) => {
   const resposeData = await client.query(
     `INSERT INTO orders (id, productName, name, adress, phone)
     values ($1, $2, $3, $4, $5) RETURNING *`,
-    [id, productName, name, adress, phone],
+    [id, productName, name, adress, Number(phone)],
   );
 
   res.statusCode = 201;
